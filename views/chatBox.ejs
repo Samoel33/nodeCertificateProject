@@ -1,0 +1,20 @@
+<body class="chat">
+    <a href="/home" clas="nav-link active bg-primary">Back to main Screen</a>
+    <div class="feedback text-primary text-center"></div>
+    <div class="container" id="messageContainer">
+        <div class="localUser">
+
+        </div>
+    </div>
+    <div class="mb-3 d-flex flex-column container justify-content-center align-items-center" >
+
+       <div class="col-md-6">
+           <input type="text" class="form-control name " placeholder="name" aria-label="Username" aria-describedby="input1" readOnly value=<%=user.name%>  />
+       </div>
+       <div class="col-md-6 mb-2">
+           <input type="text" class="form-control message" placeholder="message" aria-label="Username" aria-describedby="input1" />
+       </div>
+        <button class="btn btn-primary col-4">Send Message</button>
+    </div>
+
+</body>

@@ -1,0 +1,77 @@
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="container-fluid  bg-dark">
+            <div class="container-fluid mb-2">
+                <%- include( 'partials/weather')%>
+            </div>
+            <%if(news.length>0){%>
+                <div class="container-fluid bg-light">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <%for(let image of news){%>
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" lazyload src=<%=image.urlToImage%>>
+                                        </div>
+                                        <%}%>
+                                </div>
+                                <button class="carousel-control-prev bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next bg-primary" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid m-2 d-flex flex-row">
+                    <%for(let record of news){%>
+                        <div class="card" style="width:18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Title:
+                                    <%=record.title%>
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted "></h6>
+                                <p class="card-text">
+                                    Description:
+                                    <%=record.description%>
+                                </p>
+                                <p class="card-footer">
+                                    <% const date = record.date%>
+                                        <% const dateString = date.getDate()%>
+                                            <% const month = date.getMonth()+1%>
+                                                <% const year = date.getFullYear()%>
+                                                    <span>
+                                        Date : <%=dateString %>/<%=month%>/<%=year%>
+                                       </span>
+                                </p>
+                            </div>
+                        </div>
+                        <%}%>
+                </div>
+        </div>
+        <%}else{%>
+            <h1 class="heading text-dannger">No news today 🙄 right👎</h1>
+            <%}%>
+
+                <div class="container-fluid related-news">
+                    <h1 class="heading">Some related news here</h1>
+                </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,64 @@
+<body class="bg-dark">
+    <div class="container-fluid  bg-dark">
+        <div class="container-fluid  bg-light d-flex justify-content-center align-items-center p-3">
+
+            <%if(news.length>0){%>
+                <div class="container-fluid">
+                    <table id="table_id" class="table table-light table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Published At</th>
+                                <th>Updated At</th>
+                                <th>Edit/Delete</th>
+                            </tr>
+                        </thead>
+                        <%for(let record of news){%>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <%= record.title%>
+                                    </th>
+                                    <td>
+                                        <%= record.description%>
+                                    </td>
+                                    <td>
+                                        <% const date = record.date%>
+                                            <% const dateString = date.getDate()%>
+                                                <% const month = date.getMonth()+1%>
+                                                    <% const year = date.getFullYear()%>
+                                                        <span>
+                                        <%=dateString %>/<%=month%>/<%=year%>
+                                       </span>
+
+                                    </td>
+                                    <td>
+                                        <% const update = record.updatedAt%>
+                                            <% const updated = update.getDate()%>
+                                                <% const monthUpdated = update.getMonth()+1%>
+                                                    <% const yearUpdated = update.getFullYear()%>
+                                                        <span>
+                                        <%=updated %>/<%=monthUpdated%>/<%=yearUpdated%>
+                                       </span>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a type="button" class="btn btn-warning editNews" accessKey=<%-record.id%>>Edit</a>
+                                            <a type="button" class="btn btn-danger delete" accessKey=<%-record.id%>>Delete</a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                            <%}%>
+                    </table>
+                </div>
+                <%}else{%>
+                    <p class="heading text-danger">NO NEWS AT ALL TODAY WHAAAT!!!🙄</p>
+                    <%}%>
+
+        </div>
+    </div>
+
+</body>

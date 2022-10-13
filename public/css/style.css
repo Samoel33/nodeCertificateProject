@@ -1,0 +1,62 @@
+.fa-sun {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+}
+
+.fa-comment {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    font-size: 25px;
+    color: red;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.alert--success {
+    background-color: #20bf6b;
+}
+
+.alert--error {
+    background-color: #eb4d4b;
+}
+
+.about-us {
+    max-width: 70ch;
+    font-size: 25px;
+    line-height: 150%;
+}
+
+.aboutContainer {
+    border-bottom: 1px solid white;
+}
+
+.contactUs,
+.aboutContainer {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getNews {
+    cursor: pointer;
+}

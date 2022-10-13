@@ -1,0 +1,36 @@
+<body>
+    <div class="container-fluid  bg-dark">
+        <div class="container-fluid  bg-dark d-flex justify-content-center align-items-center p-3">
+            <form class="form-horizontal bg-light col-8 p-2 addNews">
+                <h2 class="heading text-center text-danger">
+                    <%=title%> (-R-)
+                </h2>
+                <div class="mb-3 ">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="News Title">
+                </div>
+                <div class="mb-3 ">
+                    <label for="description" class="form-label">Email address</label>
+                    <input type="text" class="form-control" id="description" placeholder="News description" name="description">
+                </div>
+                <div class="mb-3 ">
+                    <label for="url" class="form-label">Url</label>
+                    <input type="text" class="form-control" id="url" placeholder="News url" name="newsUrl">
+                </div>
+                <div class="mb-3 ">
+                    <label for="url-image" class="form-label">Url to Image</label>
+                    <input type="text" class="form-control" id="url-image" placeholder=" Url to news image" name="urlToImage">
+                </div>
+                <div class="mb-3 ">
+                    <label for="publishedAt" class="form-label">Published At</label>
+                    <input type="text" class="form-control" id="publishedAt" name="publishedAt">
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-primary m-1">Add News</button>
+                    <button type="submit" class="btn btn-warning m-1">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>

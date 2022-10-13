@@ -1,0 +1,33 @@
+<body class="bg-dark">
+    <div class="container-fluid">
+        <div class="container-fluid  bg-dark d-flex justify-content-center align-items-center p-3">
+            <form class="form-horizontal bg-light col-5 p-2 registerForm">
+                <h2 class="heading text-center text-danger">
+                    <%=title%> (-R-)
+                </h2>
+                <div class="mb-3 ">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control name" id="name" aria-describedby="emailHelp" placeholder="Enter userName" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control email" id="email" aria-describedby="emailHelp" placeholder="Enter your registered Email" name="email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control password" id="password" placeholder="Enter your password" name="password">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordConfirm" class="form-label">Password</label>
+                    <input type="password" class="form-control passwordConfirm" id="passwordConfirm" placeholder="Re-enter password" name="passwordConfirm">
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-primary register">Register</button>
+                    <button type="submit" class="btn btn-warning reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
